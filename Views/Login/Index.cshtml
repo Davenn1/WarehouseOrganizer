@@ -1,0 +1,112 @@
+﻿@model Wearhouse3.Class.User;
+@using Microsoft.AspNetCore.Mvc.TagHelpers;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wearhouse</title>
+    <link href="~/css/HeaderFooter.css" rel="stylesheet" type="text/css"></link>
+    <link href="~/css/Login.css" rel="stylesheet" type="text/css"></link>
+</head>
+<body>
+    <div class="mobile-menu">
+        <a asp-area="" asp-controller="Category" asp-action="Index" style="text-decoration:none;" ><h1>Category</h1></a>
+        <a asp-area="" asp-controller="AboutUs" asp-action="Index" style="text-decoration:none;"><h1>About Us</h1></a>
+        <a asp-area="" asp-controller="Login" asp-action="Index" style="text-decoration:none;"><h1>Login</h1></a>
+        <a asp-area="" asp-controller="Register" asp-action="Index2" style="text-decoration:none;"><h1>Register</h1></a>
+    </div>
+    <nav class="nav-container">
+        <div class="website-navigation">
+            <h1>Wearhouse</h1>
+            <div class="list">
+                <div class="nav-website-list-container">
+                    <a asp-area="" asp-controller="Category" asp-action="Index" style="text-decoration:none;"><h2>Category</h2></a>
+                    <a asp-area="" asp-controller="AboutUs" asp-action="Index" style="text-decoration:none;"><h2>About Us</h2></a>
+                </div>
+                <div class="nav-list-container">
+                    <a asp-area="" asp-controller="Login" asp-action="Index" style="text-decoration:none;"><h2>Login</h2></a>
+                    <a asp-area="" asp-controller="Register" asp-action="Index2" style="text-decoration:none;"><h2>Register</h2></a>
+                </div>
+            </div>
+
+            <div class="nav-list-container-mobile">
+                <img src="~/img/menu.png">
+            </div>
+    </nav>
+
+    <div id="myPopup" class="popup">
+        <div class="popup-content">
+            <p>This is a popup box!</p>
+            <button id="closePopup">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <div class="login-container">
+        <div class="title-container">
+            <h1>Login</h1>
+        </div>
+        @using(Html.BeginForm("Authorise", "Login", FormMethod.Post))
+        {
+        <form class="form-container"  method="post">
+            <div class="email-container">
+                <div class="text-container"><h2>Email Address</h2></div>
+                <div class="input-container">
+                        @Html.EditorFor(model=>model.Email)
+                        <p>Email format must be correct</p>
+                </div>
+                
+                
+            </div>
+
+            <div class="password-container">
+                <div class="text-container"><h2>Password</h2></div>
+                <div class="input-container">
+                        @Html.EditorFor(model=>model.Password)
+                        <p>Please input a password</p>
+                </div>
+                
+            </div>
+
+            <div class="remember-container">
+                <div class="empty"></div>
+                <div class="check">
+                    <input type="checkbox">
+                    <h3>Remember me</h3>
+                </div>
+            </div>
+
+            <div class="submit-container">
+                <div class="submit-button-container">Login</div>
+                <a href="">Forgot your password?</a>
+            </div>
+
+            <p class="invalid-password">@Html.DisplayFor(model => model.Password)</p>
+
+        </form>
+        }
+    </div>
+    
+
+    <div class="footer-container">
+        <div class="logo-container">
+            <a href="https://twitter.com/" target="_blank"><img src="@Url.Content("~/img/twitter.png")"</a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="~/img/facebook.png"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="~/img/instagram.png"></a>
+        </div>
+
+        <div class="footer-text-container">
+            <h3>Copyright 2021 &#169; Davenn. All Rights Reserved</h3>
+        </div>
+    </div>
+
+    <script src="~/js/Login2.js"></script>
+</body>
+</html>
+

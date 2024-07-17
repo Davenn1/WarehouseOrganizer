@@ -1,0 +1,81 @@
+﻿@using Microsoft.AspNetCore.Session;
+@model Wearhouse3.Class.User;
+
+@{
+    Layout = null;
+    
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wearhouse</title>
+    <link href="~/css/HeaderTest.css" rel="stylesheet" type="text/css"></link>
+    <link href="~/css/Dashboard.css" rel="stylesheet" type="text/css"></link>
+</head>
+<body>
+    <div class="mobile-menu">
+        <a asp-area="" asp-controller="Login" asp-action="AddCategory" style="text-decoration:none;"><h1>Category</h1></a>
+        <a asp-area="" asp-controller="Login" asp-action="AboutUs" style="text-decoration:none;"><h1>About Us</h1></a>
+        <a href="@Url.Action("Logout", "Login")" style="text-decoration:none;"><h1>Logout</h1></a>
+    </div>
+    <nav class="nav-container">
+        <div class="website-navigation">
+            <h1>Wearhouse</h1>
+            <div class="list">
+                <div class="nav-website-list-container">
+                    <a asp-area="" asp-controller="Login" asp-action="AddCategory" style="text-decoration:none;"><h2>Category</h2></a>
+                    <a asp-area="" asp-controller="Login" asp-action="AboutUs" style="text-decoration:none;"><h2>About Us</h2></a>
+                </div>
+                <div class="nav-list-container">
+                    <div class="Logout">
+                        <div>@ViewBag.username</div>
+                        <div class="drop-down"><img src="/img/down-chevron.png"></div>
+
+                        <div class="logout-container">
+                            <h1><a href="@Url.Action("Logout", "Login")" style="text-decoration:none;">Logout</a></h1>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="nav-list-container-mobile">
+                <img src="img/menu.png">
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="dashboard-title-container">
+            <h1>Dashboard</h1>
+        </div>
+        <div class="dashboard-text-container">
+            <p>You are logged in!</p>
+        </div>
+    </div>
+
+    </div>
+
+
+    <div class="footer-container">
+        <div class="logo-container">
+            <a href="https://twitter.com/" target="_blank"><img src="img/twitter.png" target></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.png"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png"></a>
+        </div>
+
+        <div class="footer-text-container">
+            <h3>Copyright 2021 &#169; Davenn. All Rights Reserved</h3>
+        </div>
+    </div>
+
+    <script src="~/js/Login.js"></script>
+    <script src="~/js/HeaderTest.js"></script>
+    <script></script>
+</body>
+</html>
+
+

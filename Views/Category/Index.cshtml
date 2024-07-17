@@ -1,0 +1,109 @@
+﻿@model Wearhouse3.Class.Category;
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wearhouse</title>
+    <link href="~/css/Category.css" rel="stylesheet" type="text/css">
+    <link href="~/css/HeaderFooter.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div class="mobile-menu">
+        <a asp-area="" asp-controller="Category" asp-action="Index"><h1>Category</h1></a>
+        <a asp-area="" asp-controller="AboutUs" asp-action="Index"><h1>About Us</h1></a>
+        <a asp-area="" asp-controller="Login" asp-action="Index"><h1>Login</h1></a>
+        <a asp-area="" asp-controller="Register" asp-action="Index"><h1>Register</h1></a>
+    </div>
+    <nav class="nav-container">
+        <div class="website-navigation">
+            <h1>Wearhouse</h1>
+            <div class="list">
+                <div class="nav-website-list-container">
+                    <a asp-area="" asp-controller="Category" asp-action="Index"><h2>Category</h2></a>
+                    <a asp-area="" asp-controller="AboutUs" asp-action="Index"><h2>About Us</h2></a>
+                </div>
+                <div class="nav-list-container">
+                    <a asp-area="" asp-controller="Login" asp-action="Index"><h2>Login</h2></a>
+                    <a asp-area="" asp-controller="Register" asp-action="Index"><h2>Register</h2></a>
+                </div>
+            </div>
+
+            <div class="nav-list-container-mobile">
+                <img src="img/menu.png">
+            </div>
+    </nav>
+
+    <div id="myPopup" class="popup">
+    </div>
+
+    <div class="category-container">
+        <div class="category-title-container">
+            <h1>Product Categories</h1>
+        </div>
+
+        <div class="category-insert-container">
+            <div class="add-category-button">
+                <p>Add Category</p>
+            </div>
+
+            <div class="category-output-container">
+                <div class="category-text-container">
+                    <div class="category-name">
+                        <p class="num">No.</p>
+                        <p class="category">Category</p>
+                        <p class="action">Action</p>
+                    </div>
+
+                    <div class="category-name-output">
+                        <p class="num">1.</p>
+                        <p class="category">Shoes</p>
+                        <div class="action-container">
+                            <div class="edit-button"><p>Edit</p></div>
+                            <div class="delete-button"><p>Delete</p></div>
+                        </div>
+                    </div>
+
+                    <div class="category-name-output">
+                        <p class="num">2.</p>
+                        <p class="category">Hats</p>
+                        <div class="action-container">
+                            <div class="edit-button"><p>Edit</p></div>
+                            <div class="delete-button"><p>Delete</p></div>
+                        </div>
+                    </div>
+
+                    <div class="category-name-output">
+                        <p class="num">3.</p>
+                        <p class="category">Shirts</p>
+                        <div class="action-container">
+                            <div class="edit-button"><p>Edit</p></div>
+                            <div class="delete-button"><p>Delete</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <div class="logo-container">
+            <a href="https://twitter.com/" target="_blank"><img src="img/twitter.png" target></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.png"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png"></a>
+        </div>
+
+        <div class="footer-text-container">
+            <h3>Copyright 2021 &#169; Davenn. All Rights Reserved</h3>
+        </div>
+    </div>
+
+    <script src="~/js/Category.js"></script>
+    <script src="~/js/HeaderFooter.js"></script>
+    
+</body>
+</html>

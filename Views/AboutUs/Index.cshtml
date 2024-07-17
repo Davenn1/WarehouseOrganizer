@@ -1,0 +1,79 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WearHouse</title>
+    <link href="~/css/AboutUs.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <div class="mobile-menu">
+        <a class="anchor" asp-area="" asp-controller="Category" asp-action="Index" style="text-decoration:none;"><h1>Category</h1></a>
+        <a class="anchor" asp-area="" asp-controller="AboutUs" asp-action="Index" style="text-decoration:none;"><h1>About Us</h1></a>
+        <a class="anchor" asp-area="" asp-controller="Login" asp-action="Index" style="text-decoration:none;"><h1>Login</h1></a>
+        <a class="anchor" asp-area="" asp-controller="Register" asp-action="Index" style="text-decoration:none;"><h1>Register</h1></a>
+    </div>
+    <nav class="nav-container">
+        <div class="website-navigation">
+            <h1>Wearhouse</h1>
+            <div class="list">
+                <div class="nav-website-list-container">
+                    <a class="anchor" asp-area="" asp-controller="Category" asp-action="Index" style="text-decoration:none;"><h2>Category</h2></a>
+                    <a class="anchor" asp-area="" asp-controller="AboutUs" asp-action="Index" style="text-decoration:none;"><h2>About Us</h2></a>
+                </div>
+                <div class="nav-list-container">
+                    <a class="anchor" asp-area="" asp-controller="Login" asp-action="Index" style="text-decoration:none;"><h2>Login</h2></a>
+                    <a class="anchor" asp-area="" asp-controller="Register" asp-action="Index" style="text-decoration:none;"><h2>Register</h2></a>
+                </div>
+            </div>
+
+            <div class="nav-list-container-mobile">
+                <img src="~/img/menu.png">
+            </div>
+    </nav>
+
+    <div class="about-container">
+        <div class="about-title">
+            <h1>About Us</h1>
+        </div>
+
+        <div class="description-container">
+            <div class="description-text-container">
+                <p>
+                    WearHouse is a fast fashion brand that was founded in 2019. WearHouse aims to provide affordable, high quality,
+                    trendy, and easy-to-access fashion apparels. To fulfill our goals, we have opened more than 100 stores in various cities across Indonesia.
+                    We have a commitment to make each of our product available in every store, with equal price tags and build qualitites regardless of location.
+                </p>
+            </div>
+
+            <div class="contact-container">
+                <h1>Contact Us</h1>
+                <p>(021) 12345</p>
+                <p>Email: support@wearhouse.com</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <div class="logo-container">
+            <a href="https://twitter.com/" target="_blank"><img src="img/twitter.png" target></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.png"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png"></a>
+        </div>
+
+        <div class="footer-text-container">
+            <h3>Copyright 2021 &#169; Davenn. All Rights Reserved</h3>
+        </div>
+    </div>
+
+    <script src="~/js/AboutUs.js"></script>
+</body>
+</html>
+
+
+
+
